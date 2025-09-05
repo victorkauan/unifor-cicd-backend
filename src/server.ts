@@ -20,5 +20,5 @@ app.get("/api/health", (_, response) => {
 app.use("/api/products", productRouter);
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
