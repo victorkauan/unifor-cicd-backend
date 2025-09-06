@@ -81,7 +81,7 @@ export default class ProductController {
       where: { id: Number(id) },
     });
 
-    if (!product) {
+    if (product) {
       return sendResponse({
         response,
         status_code: 404,
