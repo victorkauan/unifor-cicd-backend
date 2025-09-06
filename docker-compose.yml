@@ -1,3 +1,5 @@
+# Verifique se 'services', 'networks' e 'volumes' começam sem nenhum espaço antes.
+
 services:
   api:
     build: .
@@ -25,7 +27,12 @@ services:
       - prometheus
     networks:
       - monitoring
+    volumes:
+      - grafana-data:/var/lib/grafana
 
-networks:
+networks: 
   monitoring:
     driver: bridge
+
+volumes: 
+  grafana-data:
